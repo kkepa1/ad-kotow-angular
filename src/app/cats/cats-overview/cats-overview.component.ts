@@ -28,4 +28,32 @@ export class CatsOverviewComponent implements OnInit {
   onClick($event: Cat) {
     this.router.navigate(['cats', $event.name]);
   }
+
+  sortByName() {
+    this.cats.sort((n1,n2) => {
+      if (n1.name > n2.name) {
+          return 1;
+      }
+
+      if (n1.name < n2.name) {
+          return -1;
+      }
+
+      return 0;
+    });
+  }
+
+  sortByBreed() {
+    this.cats.sort((n1,n2) => {
+      if (n1.breed > n2.breed) {
+          return 1;
+      }
+
+      if (n1.breed < n2.breed) {
+          return -1;
+      }
+
+      return 0;
+    });
+  }
 }

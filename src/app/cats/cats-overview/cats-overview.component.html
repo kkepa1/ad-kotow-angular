@@ -1,7 +1,7 @@
 <section>
     <div class="buttons">
-      <!--<button>Sort by name</button>
-      <button>Sort by breed</button>--->
+      <button class="sort-by-name" (click)="sortByName()">Sort by name</button>
+      <button class="sort-by-breed" (click)="sortByBreed()">Sort by breed</button>
     </div>
     <div class="listElement" *ngFor="let cat of cats">
         <img src="./assets/cats-pic/{{cat.picUrl}}" alt="" (click)="onClick(cat)">
