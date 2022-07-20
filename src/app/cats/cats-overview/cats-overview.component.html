@@ -1,6 +1,13 @@
 <section>
+    <div class="buttons">
+      <!--<button>Sort by name</button>
+      <button>Sort by breed</button>--->
+    </div>
     <div class="listElement" *ngFor="let cat of cats">
         <img src="./assets/cats-pic/{{cat.picUrl}}" alt="" (click)="onClick(cat)">
+        <div class="tooltip">
+          <span>{{cat.funFact}}</span>
+        </div>
         <span>{{cat.name}}</span>
     </div>
 </section>

@@ -13,31 +13,41 @@ export class CatsDataService {
       name: 'Puszek',
       ageMonths: 8,
       breed: 'maine coon',
-      picUrl: 'puszek1.jpg'
+      picUrl: 'puszek1.jpg',
+      vaccination: '-',
+      funFact: 'They are gentle giants'
     },
     {
       name: 'Mruczek',
       ageMonths: 36,
       breed: 'brytyjczyk',
-      picUrl: 'mruczek1.jpg'
+      picUrl: 'mruczek1.jpg',
+      vaccination: '+',
+      funFact: 'One of the oldest cat breed in the world'
     },
     {
       name: 'Kiciek',
       ageMonths: 52,
       breed: 'perski',
-      picUrl: 'kiciek.jpg'
+      picUrl: 'kiciek.jpg',
+      vaccination: '+',
+      funFact: 'Average Persian cat lives for around 12 years'
     },
     {
       name: 'Kłaczek',
       ageMonths: 81,
       breed: 'brytyjczyk',
-      picUrl: 'klaczek.jpg'
+      picUrl: 'klaczek.jpg',
+      vaccination: '+',
+      funFact: 'One of the oldest cat breed in the world'
     },
     {
       name: 'Pimpuś',
       ageMonths: 6,
       breed: 'dachowiec',
-      picUrl: 'pimpus.jpg'
+      picUrl: 'pimpus.jpg',
+      vaccination: '-',
+      funFact: 'Tabby Is Not a Cat Breed'
     }
   ];
 

@@ -3,6 +3,8 @@ export interface Cat {
   ageMonths : number;
   breed: string;
   picUrl: string;
+  vaccination: string;
+  funFact: string;
 }
 
 export interface AdoptionData {

@@ -14,4 +14,18 @@
     max-width: 250px;
     max-height: 250px;
   }
+
+  .tooltip {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  img:hover + .tooltip{
+    visibility: visible;
+  }
+
+
 }
