@@ -1,0 +1,22 @@
+zadanie 1:
+rozszerzyć model kota o flagę szczepienia: zaszczepiony/niezaszczepiony
+wyświetlić flagę jako tick albo krzyżyk
+
+zadanie 2:
+w widoku listy kotów dodać obsługę najechania kursorem na kota
+w tym momencie pokazuje się tooltip z ciekawostką o tym kocie
+
+zadanie 3:
+dodać 2 przyciski w widoku listy kotów:
+1 sortuje po imieniu
+2 po rasie
+
+zadanie 4:
+warunkowe stylowanie
+w momencie zgłoszenia adopcji kota przełączamy flagę wolny/zarezerwowany (rozszerzenie moedelu)
+w zależności od flagi kolorujemy ramkę kota na zielono albo czerwono
+
+zadanie 5:
+zmienić pojedyczne zdjęcie kota w widoku szczegółowym na kolekcję,
+dodać przewijanie zdjęć przyciskami
+wydzielić obsługę obrazków wraz z przewijaniem do nowego komponentu

@@ -1,0 +1,51 @@
+<form [formGroup]="adoptionForm" #formDir="ngForm" (ngSubmit)="submit()">
+    <p class="cats-name">adoptujesz kota: {{catsName}}</p>
+
+    <div [hidden]="formDir.submitted">
+        <div>
+            <div class="form-group">
+                <label for="name">Imię i nazwisko</label>
+                <input type="text" id="name" class="form-control"
+                       formControlName="name">
+
+                <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                     class="alert alert-danger">
+
+                    <div *ngIf="name.errors?.['required']">
+                        pole wymagane
+                    </div>
+                    <div *ngIf="name.errors?.['minlength']">
+                        proszę wpisać pełne imię
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">telefon</label>
+                <input type="text" id="phone" class="form-control"
+                       formControlName="phone">
+
+                <div *ngIf="phone.invalid && (phone.dirty || phone.touched)"
+                     class="alert alert-danger">
+                    <div *ngIf="phone.errors?.['required']">
+                        pole wymagane
+                    </div>
+                    <div *ngIf="phone.errors?.['minlength']">
+                        proszę wpisać poprawny numer telefonu
+                    </div>
+                    <div *ngIf="!phone.errors?.['minlength'] && phone.errors?.['pattern']">
+                        proszę wpisać poprawny numer telefonu
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit"
+                class="btn btn-default"
+                [disabled]="adoptionForm.invalid">potwierdź
+        </button>
+        <button type="button" class="btn btn-default"
+                (click)="cancelAdoptionForm()">anuluj
+        </button>
+    </div>
+</form>

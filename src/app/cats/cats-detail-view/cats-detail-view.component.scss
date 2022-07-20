@@ -1,0 +1,18 @@
+.side-by-side{
+    display: flex;
+    flex-direction: row;
+}
+.cols {
+    display: flex;
+    flex-direction: column;
+}
+
+.cats-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: darkblue;
+}
+
+img {
+    margin-right: 16px;
+}

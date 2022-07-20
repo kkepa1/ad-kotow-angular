@@ -1,0 +1,17 @@
+:host {
+
+  background-color: #fcfacd;
+  display: block;
+
+
+  .listElement {
+    max-width: 550px;
+    border: solid 2px #444444;
+    margin: 20px 0 20px 0;
+  }
+
+  img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+}

@@ -1,0 +1,23 @@
+<section>
+    <div class="side-by-side">
+        <img src="./assets/cats-pic/{{cat.picUrl}}" alt="">
+        <div class="cols">
+            <span class="cats-name">{{cat.name}}</span>
+            <span>{{cat.ageMonths}} miesięcy</span>
+            <span>{{cat.breed}}</span>
+        </div>
+    </div>
+
+    <button (click)="openAdoptionForm()">adoptuj</button>
+    <button routerLink="/cats">
+        <span>{{'powrót'}}</span></button>
+    <ng-container *ngIf="adoptionFormActive">
+        <app-cats-adoption-form
+                [catsName]="cat.name"
+                (closeMe)="onFormClose($event)">
+        </app-cats-adoption-form>
+    </ng-container>
+    <div *ngIf="showConfirmMsg">
+        <p>rezerwacja wysłana, będziemy się kontaktować</p>
+    </div>
+</section>

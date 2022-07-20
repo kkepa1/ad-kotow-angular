@@ -1,0 +1,6 @@
+<section>
+    <div class="listElement" *ngFor="let cat of cats">
+        <img src="./assets/cats-pic/{{cat.picUrl}}" alt="" (click)="onClick(cat)">
+        <span>{{cat.name}}</span>
+    </div>
+</section>
