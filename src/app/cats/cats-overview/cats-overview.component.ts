@@ -56,4 +56,8 @@ export class CatsOverviewComponent implements OnInit {
       return 0;
     });
   }
+
+  reserved(cat:Cat) {
+    return cat.reserved;
+  }
 }

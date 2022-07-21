@@ -15,7 +15,8 @@ export class CatsDataService {
       breed: 'maine coon',
       picUrl: 'puszek1.jpg',
       vaccination: '-',
-      funFact: 'They are gentle giants'
+      funFact: 'They are gentle giants',
+      reserved: false
     },
     {
       name: 'Mruczek',
@@ -23,7 +24,8 @@ export class CatsDataService {
       breed: 'brytyjczyk',
       picUrl: 'mruczek1.jpg',
       vaccination: '+',
-      funFact: 'One of the oldest cat breed in the world'
+      funFact: 'One of the oldest cat breed in the world',
+      reserved: false
     },
     {
       name: 'Kiciek',
@@ -31,7 +33,8 @@ export class CatsDataService {
       breed: 'perski',
       picUrl: 'kiciek.jpg',
       vaccination: '+',
-      funFact: 'Average Persian cat lives for around 12 years'
+      funFact: 'Average Persian cat lives for around 12 years',
+      reserved: false
     },
     {
       name: 'Kłaczek',
@@ -39,7 +42,8 @@ export class CatsDataService {
       breed: 'brytyjczyk',
       picUrl: 'klaczek.jpg',
       vaccination: '+',
-      funFact: 'One of the oldest cat breed in the world'
+      funFact: 'One of the oldest cat breed in the world',
+      reserved: true
     },
     {
       name: 'Pimpuś',
@@ -47,7 +51,8 @@ export class CatsDataService {
       breed: 'dachowiec',
       picUrl: 'pimpus.jpg',
       vaccination: '-',
-      funFact: 'Tabby Is Not a Cat Breed'
+      funFact: 'Tabby Is Not a Cat Breed',
+      reserved: false
     }
   ];
 
