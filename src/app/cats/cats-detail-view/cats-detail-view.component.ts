@@ -14,6 +14,7 @@ export class CatsDetailViewComponent implements OnInit {
     this.route = activatedRoute.snapshot;
   }
 
+  cats: Cat[] = [];
   cat: Cat;
   adoptionFormActive: boolean;
   showConfirmMsg: boolean;
@@ -22,6 +23,7 @@ export class CatsDetailViewComponent implements OnInit {
   ngOnInit(): void {
     const catName = this.route.params['catName'];
     this.catsDataService.getCat(catName).subscribe(data => this.cat = data);
+    this.loadCats();
   }
 
   openAdoptionForm(): void {
@@ -32,5 +34,20 @@ export class CatsDetailViewComponent implements OnInit {
     this.adoptionFormActive = false;
     this.showConfirmMsg = success;
     this.cat.reserved = true;
+  }
+
+  private loadCats() {
+    this.activatedRoute.data.subscribe(data => {
+        this.cats = data['cats'];
+      }
+    );
+  }
+
+  getPrevious() {
+    this.catsDataService.getPreviousCat(this.cat).subscribe(data => this.cat = data);
+  }
+
+  getNext() {
+    this.catsDataService.getNextCat(this.cat).subscribe(data => this.cat = data);
   }
 }

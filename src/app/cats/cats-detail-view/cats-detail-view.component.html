@@ -1,6 +1,8 @@
 <section>
     <div class="side-by-side">
+        <button (click)="getPrevious()">Previous</button>
         <img src="./assets/cats-pic/{{cat.picUrl}}" alt="">
+        <button (click)="getNext()">Next</button>
         <div class="cols">
             <span class="cats-name">{{cat.name}}</span>
             <span>{{cat.ageMonths}} miesięcy</span>

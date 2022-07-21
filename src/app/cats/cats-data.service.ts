@@ -64,4 +64,18 @@ export class CatsDataService {
   getCat(name: string): Observable<Cat > {
     return of(this.allCats.find(c => c.name === name)!);
   }
+
+  getPreviousCat(cat: Cat): Observable<Cat> {
+    if (this.allCats.indexOf(cat) == 0) {
+      return of(this.allCats[this.allCats.length - 1])
+    }
+    return of(this.allCats[this.allCats.indexOf(cat) - 1]);
+  }
+
+  getNextCat(cat: Cat): Observable<Cat> {
+    if (this.allCats.indexOf(cat) == (this.allCats.length - 1)) {
+      return of(this.allCats[0])
+    }
+    return of(this.allCats[this.allCats.indexOf(cat) + 1]);
+  }
 }
