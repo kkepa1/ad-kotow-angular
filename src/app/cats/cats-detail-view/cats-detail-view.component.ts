@@ -14,7 +14,6 @@ export class CatsDetailViewComponent implements OnInit {
     this.route = activatedRoute.snapshot;
   }
 
-  cats: Cat[] = [];
   cat: Cat;
   adoptionFormActive: boolean;
   showConfirmMsg: boolean;
@@ -23,11 +22,15 @@ export class CatsDetailViewComponent implements OnInit {
   ngOnInit(): void {
     const catName = this.route.params['catName'];
     this.catsDataService.getCat(catName).subscribe(data => this.cat = data);
-    this.loadCats();
   }
 
   openAdoptionForm(): void {
-    this.adoptionFormActive = true;
+    if(this.cat.reserved == false) {
+      this.adoptionFormActive = true;
+    }
+    else {
+      alert("This cat is already reserved!");
+    }
   }
 
   onFormClose(success: boolean) {
@@ -36,18 +39,11 @@ export class CatsDetailViewComponent implements OnInit {
     this.cat.reserved = true;
   }
 
-  private loadCats() {
-    this.activatedRoute.data.subscribe(data => {
-        this.cats = data['cats'];
-      }
-    );
-  }
-
-  getPrevious() {
+  getPrevious(): void {
     this.catsDataService.getPreviousCat(this.cat).subscribe(data => this.cat = data);
   }
 
-  getNext() {
+  getNext(): void {
     this.catsDataService.getNextCat(this.cat).subscribe(data => this.cat = data);
   }
 }
